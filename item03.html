@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Renda individual: <input id="input_rendaIndividual">
+    Renda familiar: <input id="input_rendaFamiliar">
+    <button onclick="analisar()">Terei o benefício</button>
+</body>
+</html>
+<script>
+    function analisar() {
+        var rendaIndividual = Number(input_rendaIndividual.value)
+        var rendaFamiliar = Number(input_rendaFamiliar.value);
+
+        if (rendaIndividual >=2000 || rendaFamiliar >=3000){
+            alert("Sem direito ao auxílio!")
+        }
+        else {
+            alert("Você tem direito ao auxílio")
+        }
+    }
+</script>

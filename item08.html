@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Nome da empresa: <input id="input_empresa"> <br>
+    Valor da bolsa: <input id="input_bolsa"> <br>
+    Valor do VR: <input id="input_valorVR"> <br>
+    Tempo de deslocamento: <input id="input_deslocamento"> <br>
+    <button onclick="verificar()">É preferida?</button> <br>
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    function verificar() {
+        var nomeEmpresa = input_empresa.value;
+        var valorBolsa = Number(input_bolsa.value);
+        var valorVR = Number(input_valorVR.value);
+        var deslocamento = Number(input_deslocamento.value);
+
+        if (valorBolsa >=1800 || valorVR >=20 || deslocamento <=30) {
+            div_msg.innerHTML = `A empresa ${nomeEmpresa} é uma de suas preferências`
+        }
+
+        else {
+            div_msg.innerHTML = `A empresa ${nomeEmpresa} está fora da sua lista`
+        }
+}
+</script>
